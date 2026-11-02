@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Da Get Up · Manual de Marca</title>
+<meta name="description" content="Manual de marca de Da Get Up: logo, color, tipografía, fotografía, recursos gráficos, voz y aplicaciones. Bajo la superficie.">
+<link rel="icon" type="image/svg+xml" href="descargas/vector/DaGetUp_Buho_acido.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --noche:#0b0b0c; --carbon:#141416; --linea:#26262a;
+  --hueso:#ede6da; --ceniza:#8a857d;
+  --acido:#d4ff00; --lima:#b6e000; --oliva:#7a9e00; --profundo:#3d5200; --musgo:#1c2400;
+  --uv:#7b2cff; --uvn:#1a0b33;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{background:var(--noche);color:var(--hueso);font:16px/1.65 Inter,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.05;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+::selection{background:var(--acido);color:#000}
+img{max-width:100%;display:block}
+a{color:var(--acido)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.cond{font-family:Archivo,sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;line-height:.88}
+.mono{font:500 12px/1.4 "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase}
+.muted{color:var(--ceniza)}
+p{max-width:66ch}
+p+p{margin-top:12px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:50;background:rgba(11,11,12,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--linea)}
+.nav .wrap{display:flex;align-items:center;gap:22px;height:58px;overflow-x:auto;scrollbar-width:none}
+.nav .wrap::-webkit-scrollbar{display:none}
+.nav img{height:18px;flex:none}
+.nav a{font:500 11px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--ceniza);text-decoration:none;white-space:nowrap}
+.nav a:hover{color:var(--hueso)}
+.nav a.dl{margin-left:auto;background:var(--acido);color:#000;padding:8px 12px}
+
+/* cover */
+.cover{min-height:92svh;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;padding:80px 24px}
+.cover::before{content:"";position:absolute;inset:0;background:radial-gradient(50% 45% at 85% 10%,rgba(123,44,255,.32),transparent 70%),radial-gradient(40% 40% at 10% 100%,rgba(212,255,0,.08),transparent 70%)}
+.cover>div{position:relative}
+.cover .logo{width:min(560px,82vw);margin:0 auto 44px}
+.cover h1{font-size:clamp(56px,10vw,140px)}
+.cover h1 em{font-style:normal;color:var(--acido)}
+.cover .mono{color:var(--ceniza);margin-top:22px}
+
+/* sections */
+section{padding:110px 0;border-top:1px solid var(--linea)}
+.kick{display:flex;justify-content:space-between;gap:16px;border-bottom:1px solid var(--linea);padding-bottom:14px;margin-bottom:44px}
+.kick .mono b{color:var(--acido);font-weight:500}
+h2{font-family:Archivo,sans-serif;font-stretch:62%;font-weight:900;text-transform:uppercase;font-size:clamp(52px,8vw,110px);line-height:.86;margin-bottom:28px}
+h2 em{font-style:normal;color:var(--acido)}
+h3{font-family:Archivo,sans-serif;font-stretch:62%;font-weight:800;text-transform:uppercase;font-size:clamp(26px,3vw,36px);line-height:1;margin:56px 0 16px}
+.lead{font-size:clamp(18px,2vw,21px);line-height:1.55}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.card{background:var(--carbon);border:1px solid var(--linea);padding:24px}
+.card h4{font:600 15px Inter;margin-bottom:6px}
+.card p,.card li{font-size:14.5px;color:#cfc8bc}
+.card ul{padding-left:18px}
+.card li+li{margin-top:5px}
+.label{display:inline-block;font:500 11px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--linea);color:var(--ceniza);padding:6px 8px;margin-bottom:12px}
+.label.on{border-color:var(--acido);color:var(--acido)}
+.label.no{border-color:#ff5a4e;color:#ff5a4e}
+
+/* logo stage */
+.stage{display:grid;place-items:center;border:1px solid var(--linea);padding:clamp(28px,6vw,70px);min-height:260px;position:relative}
+.stage img{max-height:200px;width:auto}
+.stage .cap{position:absolute;left:14px;bottom:10px}
+.s-noche{background:var(--noche)}.s-hueso{background:var(--hueso)}.s-acido{background:var(--acido)}.s-uv{background:var(--uvn)}
+.s-hueso .cap,.s-acido .cap{color:#555}
+.construct{position:relative}
+.construct img{width:100%;height:auto}
+.construct .guide{position:absolute;border:1px dashed var(--acido);pointer-events:none}
+.construct .tagx{position:absolute;font:500 11px "JetBrains Mono",monospace;color:var(--acido);letter-spacing:.1em}
+
+/* incorrect */
+.wrong .stage{min-height:200px}
+.wrong .stage img{max-height:120px}
+.wrong .stage::after{content:"✕";position:absolute;right:12px;top:8px;color:#ff5a4e;font:700 18px Inter}
+
+/* color */
+.sw{border:1px solid var(--linea)}
+.sw .c{height:150px;display:flex;align-items:flex-end;padding:12px}
+.sw .t{padding:14px;font:12px/1.65 "JetBrains Mono",monospace;background:var(--carbon);color:#cfc8bc}
+.sw .t b{display:block;font:600 15px Inter;color:var(--hueso);margin-bottom:4px}
+.ratio{display:flex;height:56px;margin:30px 0 10px}
+.ratio div{display:flex;align-items:center;padding-left:12px;font:12px "JetBrains Mono",monospace;color:#000;white-space:nowrap;overflow:hidden}
+.combo{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.combo div{aspect-ratio:4/3;display:flex;flex-direction:column;justify-content:space-between;padding:14px;border:1px solid var(--linea)}
+.combo b{font-family:Archivo;font-stretch:62%;font-weight:900;font-size:36px;line-height:.9;text-transform:uppercase}
+.combo span{font:11px "JetBrains Mono",monospace;letter-spacing:.08em;text-transform:uppercase}
+
+/* type */
+.spec{border:1px solid var(--linea);background:var(--carbon);padding:28px}
+.spec .big{font-size:clamp(64px,10vw,130px);line-height:.85}
+.spec .row{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--linea);margin-top:22px;padding-top:12px}
+.scale>div{display:grid;grid-template-columns:160px 1fr;gap:20px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--linea)}
+@media(max-width:640px){.scale>div{grid-template-columns:1fr;gap:4px}}
+
+/* photo */
+.duotono{background:var(--acido);overflow:hidden}
+.duotono img{filter:grayscale(1) brightness(1.9) contrast(1.45);mix-blend-mode:multiply}
+.ph{aspect-ratio:4/5;object-fit:cover;width:100%}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.pair{grid-template-columns:1fr}}
+
+/* graphic devices */
+.ticker{background:var(--acido);color:#000;overflow:hidden;white-space:nowrap;padding:12px 0}
+.ticker div{display:inline-block;font:900 30px/1 Archivo;font-stretch:62%;text-transform:uppercase;animation:mq 30s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ticker div{animation:none}}
+.dots{display:flex;gap:6px;align-items:flex-end;height:90px}
+.dots i{width:8px;background:repeating-linear-gradient(0deg,var(--acido) 0 6px,transparent 6px 10px)}
+
+/* apps */
+.apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.apps figure{border:1px solid var(--linea);background:var(--carbon)}
+.apps figcaption{padding:10px 12px;font:500 11px "JetBrains Mono",monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--ceniza)}
+.phone{width:min(300px,100%);margin:0 auto;border:10px solid #1e1e22;border-radius:36px;overflow:hidden;background:#000}
+.phone .ig{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.phone .ig img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.phone .head{padding:16px 14px;display:flex;gap:12px;align-items:center;border-bottom:1px solid #222}
+.phone .av{width:58px;height:58px;border-radius:50%;background:var(--noche);border:1px solid #333;display:grid;place-items:center;flex:none}
+.phone .av img{width:44px}
+.phone .bio{font:12px/1.45 Inter;color:#ddd}
+.phone .bio b{display:block;font-size:13px}
+
+/* downloads */
+.dl-row{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;padding:20px 0;border-bottom:1px solid var(--linea)}
+.dl-row h4{font:600 17px Inter}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--acido);color:#000;text-decoration:none;font:700 12px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;padding:14px 18px;white-space:nowrap}
+.btn:hover{background:var(--lima)}
+.btn.ghost{background:none;border:1px solid var(--linea);color:var(--hueso)}
+footer{padding:70px 0 90px;border-top:1px solid var(--linea);text-align:center}
+footer img{width:110px;margin:0 auto 18px}
+</style>
+</head>
+<body>
+
+<nav class="nav"><div class="wrap">
+  <img src="descargas/vector/DaGetUp_Buho_hueso.svg" alt="Da Get Up">
+  <a href="#marca">Marca</a><a href="#logo">Logo</a><a href="#color">Color</a><a href="#tipografia">Tipografía</a><a href="#fotografia">Fotografía</a><a href="#recursos">Recursos</a><a href="#voz">Voz</a><a href="#aplicaciones">Aplicaciones</a>
+  <a class="dl" href="#descargas">Descargas</a>
+</div></nav>
+
+<header class="cover"><div>
+  <img class="logo" src="descargas/vector/DaGetUp_Logo_hueso.svg" alt="Logo Da Get Up: búho y letras de puntos">
+  <h1 class="cond">Manual de <em>marca</em></h1>
+  <p class="mono">Bajo la superficie · v1.0 · Noviembre 2026</p>
+</div></header>
+
+<!-- 01 MARCA -->
+<section id="marca"><div class="wrap">
+  <div class="kick"><span class="mono"><b>01</b> La marca</span><span class="mono muted">Esencia</span></div>
+  <h2>Bajo la <em>superficie</em></h2>
+  <p class="lead">Da Get Up es el proyecto de David Higuera: un live act de electrónica con voz y letras en español, hecho de sintetizadores, Ableton y canciones propias. Lo que pasa en la pista se ve; lo que importa pasa por dentro.</p>
+  <div class="grid g3" style="margin-top:40px">
+    <div class="card"><span class="label on">Propósito</span><h4>Recordar que todavía podemos sentir profundamente.</h4><p>Música que se baila en la pista y se siente por dentro.</p></div>
+    <div class="card"><span class="label">Concepto</span><h4>Bajo la superficie</h4><p>Underground por la escena, introspectivo por el contenido. Es El Andar en tres palabras. En inglés: <i>Beneath the surface</i>.</p></div>
+    <div class="card"><span class="label">Personalidad</span><h4>Nocturno · honesto · intenso · humano</h4><p>Un artista de autor, no un DJ de playlist. Berlín en la estética, Colombia en la piel.</p></div>
+  </div>
+  <h3>Arquitectura</h3>
+  <div class="grid g3">
+    <div class="card" style="border-top:3px solid var(--hueso)"><span class="label">Marca madre</span><h4>Da Get Up</h4><p>El artista, su propósito y su voz.</p></div>
+    <div class="card" style="border-top:3px solid var(--acido)"><span class="label on">Núcleo · 70%</span><h4>El Andar · Live Act</h4><p>Álbum y show con voz, sintes y Ableton. Lo que se comunica primero.</p></div>
+    <div class="card" style="border-top:3px solid var(--uv)"><span class="label">Pista · 30%</span><h4>DJ Set</h4><p>House e indie dance para clubes y fiestas. Puerta de entrada a nuevos públicos.</p></div>
+  </div>
+</div></section>
+
+<!-- 02 LOGO -->
+<section id="logo"><div class="wrap">
+  <div class="kick"><span class="mono"><b>02</b> Logo</span><span class="mono muted">Búho + letras de puntos</span></div>
+  <h2>El <em>logo</em></h2>
+  <p class="lead">Un búho que ve en la oscuridad y letras de puntos como una pantalla LED. Los ojos son discos de vinilo; los puntos, los pasos de El Andar. Son dos piezas que funcionan juntas o por separado, pero nunca se redibujan.</p>
+  <div class="grid g2" style="margin-top:36px">
+    <div class="stage s-noche"><img src="descargas/vector/DaGetUp_Logo_hueso.svg" alt="Logo principal en hueso sobre negro"><span class="cap mono muted">Principal · hueso sobre noche</span></div>
+    <div class="stage s-acido"><img src="descargas/vector/DaGetUp_Logo_negro.svg" alt="Logo en negro sobre ácido"><span class="cap mono">Alternativa · noche sobre ácido</span></div>
+  </div>
+
+  <h3>Versiones</h3>
+  <div class="grid g3">
+    <div class="stage s-noche"><img src="descargas/vector/DaGetUp_Buho_hueso.svg" alt="Búho solo" style="max-height:110px"><span class="cap mono muted">Búho solo · avatar, sticker, favicon</span></div>
+    <div class="stage s-noche"><img src="descargas/vector/DaGetUp_Letras_hueso.svg" alt="Letras de puntos solas" style="max-height:60px"><span class="cap mono muted">Letras solas · créditos, pies</span></div>
+    <div class="stage s-hueso"><img src="descargas/vector/DaGetUp_Logo_negro.svg" alt="Logo en negro sobre hueso"><span class="cap mono">Noche sobre hueso · impresos claros</span></div>
+    <div class="stage s-noche"><img src="descargas/vector/DaGetUp_Logo_acido.svg" alt="Logo en ácido sobre negro"><span class="cap mono muted">Ácido sobre noche · piezas de impacto</span></div>
+    <div class="stage s-uv"><img src="descargas/vector/DaGetUp_Logo_hueso.svg" alt="Logo hueso sobre noche UV"><span class="cap mono muted">Hueso sobre noche UV · visuales</span></div>
+    <div class="stage" style="background:#000 url(assets/img/fest-carpa.jpg) center/cover"><img src="descargas/vector/DaGetUp_Logo_hueso.svg" alt="Logo sobre foto oscura"><span class="cap mono" style="color:#ddd">Sobre foto oscura · con zona tranquila</span></div>
+  </div>
+
+  <h3>Construcción y espacio de protección</h3>
+  <div class="grid g2">
+    <div class="stage s-noche construct" style="padding:60px">
+      <div style="position:relative;outline:1px dashed rgba(212,255,0,.6);outline-offset:28px">
+        <img src="descargas/vector/DaGetUp_Logo_hueso.svg" alt="Construcción del logo" style="max-height:220px">
+      </div>
+      <span class="cap mono muted">Línea punteada = área libre mínima</span>
+    </div>
+    <div class="card">
+      <ul>
+        <li><b>Proporción fija:</b> las letras son 1,26 veces más anchas que el búho, y el búho va centrado sobre ellas. Nunca se cambia esa relación ni la distancia entre las dos piezas.</li>
+        <li><b>Espacio de protección:</b> alrededor del logo se deja libre, como mínimo, la altura de las letras de puntos (la "X"). Ningún texto, borde o elemento entra ahí.</li>
+        <li><b>Tamaño mínimo:</b> logo completo 120 px de ancho en pantalla / 30 mm impreso. Por debajo se usa solo el búho (mínimo 32 px / 8 mm).</li>
+        <li><b>Siempre desde el archivo:</b> usar los SVG/PNG de Descargas. Nunca escribir "Da Get Up" con una fuente de puntos para imitarlo.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Usos incorrectos</h3>
+  <div class="grid g4 wrong">
+    <div><div class="stage s-noche"><img src="descargas/vector/DaGetUp_Logo_hueso.svg" alt="" style="transform:scaleX(1.5)"></div><p class="mono muted" style="margin-top:8px">No deformar</p></div>
+    <div><div class="stage s-noche"><img src="descargas/vector/DaGetUp_Logo_hueso.svg" alt="" style="transform:rotate(-12deg)"></div><p class="mono muted" style="margin-top:8px">No rotar</p></div>
+    <div><div class="stage s-noche"><img src="descargas/vector/DaGetUp_Logo_hueso.svg" alt="" style="filter:drop-shadow(0 0 12px #00f0ff) drop-shadow(0 0 20px #ff00cc)"></div><p class="mono muted" style="margin-top:8px">Sin brillos ni sombras</p></div>
+    <div><div class="stage" style="background:#ff6b35"><img src="descargas/vector/DaGetUp_Logo_hueso.svg" alt=""></div><p class="mono muted" style="margin-top:8px">Solo colores de la paleta</p></div>
+    <div><div class="stage" style="background:linear-gradient(135deg,#b800ff,#00f0ff,#ff00cc)"><img src="descargas/vector/DaGetUp_Logo_hueso.svg" alt=""></div><p class="mono muted" style="margin-top:8px">No sobre fondos psicodélicos</p></div>
+    <div><div class="stage s-acido"><img src="descargas/vector/DaGetUp_Logo_hueso.svg" alt=""></div><p class="mono muted" style="margin-top:8px">No hueso sobre ácido (no se lee)</p></div>
+    <div><div class="stage s-noche"><span class="cond" style="font-size:54px">DA GET UP</span></div><p class="mono muted" style="margin-top:8px">No reescribir el nombre</p></div>
+    <div><div class="stage s-noche"><img src="descargas/vector/DaGetUp_Logo_hueso.svg" alt="" style="opacity:.35"></div><p class="mono muted" style="margin-top:8px">No usar transparente</p></div>
+  </div>
+</div></section>
+
+<!-- 03 COLOR -->
+<section id="color"><div class="wrap">
+  <div class="kick"><span class="mono"><b>03</b> Color</span><span class="mono muted">Ácido sobre negro</span></div>
+  <h2>Ácido sobre <em>negro</em></h2>
+  <p class="lead">Una base negra y hueso, un protagonista —el verde ácido— y su complementario, el violeta UV, como sombra. Pocos colores, usados con disciplina.</p>
+  <h3>Principales</h3>
+  <div class="grid g4">
+    <div class="sw"><div class="c" style="background:#0b0b0c;border-bottom:1px solid var(--linea)"></div><div class="t"><b>Noche</b>HEX #0B0B0C<br>RGB 11 11 12<br>CMYK 75 68 67 90</div></div>
+    <div class="sw"><div class="c" style="background:#ede6da"></div><div class="t"><b>Hueso</b>HEX #EDE6DA<br>RGB 237 230 218<br>CMYK 6 8 14 0</div></div>
+    <div class="sw"><div class="c" style="background:#d4ff00"></div><div class="t"><b>Ácido</b>HEX #D4FF00<br>RGB 212 255 0<br>CMYK 20 0 100 0 · Pantone 389 C*</div></div>
+    <div class="sw"><div class="c" style="background:#7b2cff"></div><div class="t"><b>UV</b>HEX #7B2CFF<br>RGB 123 44 255<br>CMYK 70 80 0 0 · Pantone 2665 C*</div></div>
+  </div>
+  <h3>Familia de apoyo</h3>
+  <div class="grid g4">
+    <div class="sw"><div class="c" style="background:#8a857d"></div><div class="t"><b>Ceniza</b>#8A857D · textos secundarios</div></div>
+    <div class="sw"><div class="c" style="background:#b6e000"></div><div class="t"><b>Lima</b>#B6E000 · hover, estados</div></div>
+    <div class="sw"><div class="c" style="background:#3d5200"></div><div class="t"><b>Profundo</b>#3D5200 · fondos de acento</div></div>
+    <div class="sw"><div class="c" style="background:#1a0b33"></div><div class="t"><b>Noche UV</b>#1A0B33 · degradados, visuales</div></div>
+  </div>
+  <p class="muted" style="font-size:13px;margin-top:10px">* Valores CMYK y Pantone de referencia: confirmar con prueba de color de la imprenta. El ácido pierde brillo en papel; en impresión usar el Pantone o tinta fluorescente.</p>
+
+  <h3>Proporción</h3>
+  <div class="ratio">
+    <div style="flex:60;background:#0b0b0c;color:var(--ceniza);border:1px solid var(--linea)">60% noche</div>
+    <div style="flex:25;background:#ede6da">25% hueso</div>
+    <div style="flex:10;background:#d4ff00">10% ácido</div>
+    <div style="flex:5;background:#7b2cff;color:#fff">5%</div>
+  </div>
+  <p class="muted" style="font-size:14px">El ácido es poco pero siempre presente: un titular, un botón, una franja. El UV solo como sombra o brillo, nunca como protagonista.</p>
+
+  <h3>Combinaciones</h3>
+  <div class="combo">
+    <div style="background:#0b0b0c"><span class="label on" style="margin:0;align-self:flex-start">Sí</span><b style="color:#d4ff00">Ácido</b><span style="color:#8a857d">sobre noche</span></div>
+    <div style="background:#0b0b0c"><span class="label on" style="margin:0;align-self:flex-start">Sí</span><b style="color:#ede6da">Hueso</b><span style="color:#8a857d">sobre noche</span></div>
+    <div style="background:#d4ff00;color:#000"><span class="label" style="margin:0;align-self:flex-start;border-color:#000;color:#000">Sí</span><b>Noche</b><span>sobre ácido</span></div>
+    <div style="background:#1a0b33"><span class="label on" style="margin:0;align-self:flex-start">Sí</span><b style="color:#d4ff00">Ácido</b><span style="color:#9a8fb5">sobre noche UV</span></div>
+    <div style="background:#d4ff00"><span class="label no" style="margin:0;align-self:flex-start">No</span><b style="color:#7b2cff">UV</b><span style="color:#333">vibra y no se lee</span></div>
+    <div style="background:#d4ff00"><span class="label no" style="margin:0;align-self:flex-start">No</span><b style="color:#ede6da">Hueso</b><span style="color:#333">sin contraste</span></div>
+  </div>
+</div></section>
+
+<!-- 04 TIPOGRAFIA -->
+<section id="tipografia"><div class="wrap">
+  <div class="kick"><span class="mono"><b>04</b> Tipografía</span><span class="mono muted">Tres familias, gratis</span></div>
+  <h2>Tipo<em>grafía</em></h2>
+  <p class="lead">Tres familias de Google Fonts, gratuitas y libres. Cada una tiene un trabajo. Las letras de puntos son exclusivas del logo.</p>
+  <div class="grid g3" style="margin-top:36px">
+    <div class="spec"><span class="label on">Titulares</span><div class="big cond">Archivo</div><div class="row mono muted"><span>Condensada · ancho 62</span><span>800–900</span></div><p style="margin-top:12px;font-size:14px;color:#cfc8bc">Mayúsculas, interlineado apretado. Titulares, portadas, flyers, fechas.</p></div>
+    <div class="spec"><span class="label">Texto</span><div class="big" style="font-family:Inter;font-weight:600;letter-spacing:-.03em">Inter</div><div class="row mono muted"><span>Regular · Medium · Semibold</span><span>400–600</span></div><p style="margin-top:12px;font-size:14px;color:#cfc8bc">Bios, captions, párrafos, prensa. Clara en pantalla y en papel.</p></div>
+    <div class="spec"><span class="label">Datos</span><div class="big" style="font-family:'JetBrains Mono';font-weight:500;font-size:clamp(44px,6vw,76px)">Mono</div><div class="row mono muted"><span>JetBrains Mono</span><span>400–700</span></div><p style="margin-top:12px;font-size:14px;color:#cfc8bc">Etiquetas, créditos, fechas, BPM, numeraciones [01]. Siempre en mayúsculas con espaciado.</p></div>
+  </div>
+  <h3>Jerarquía</h3>
+  <div class="scale">
+    <div><span class="mono muted">Titular · Archivo 900</span><span class="cond" style="font-size:clamp(48px,7vw,96px)">Bajo la <span style="color:var(--acido)">superficie</span></span></div>
+    <div><span class="mono muted">Subtítulo · Archivo 800</span><span class="cond" style="font-size:clamp(28px,3.4vw,44px);font-weight:800">El Andar · Live Act</span></div>
+    <div><span class="mono muted">Texto · Inter 400</span><span style="font-size:18px">Canciones que se bailan en la pista y se sienten por dentro, tocadas en vivo con voz, sintetizadores y Ableton.</span></div>
+    <div><span class="mono muted">Etiqueta · Mono 500</span><span class="mono" style="font-size:14px"><b style="color:var(--acido);font-weight:500">[01]</b> Medellín · 13–26 nov 2026</span></div>
+  </div>
+  <h3>Recursos tipográficos</h3>
+  <div class="grid g3">
+    <div class="card"><span class="cond" style="font-size:60px;color:transparent;-webkit-text-stroke:1.5px var(--hueso)">Contorno</span><p style="margin-top:10px">Una palabra en contorno dentro de un titular sólido. Máximo una por pieza.</p></div>
+    <div class="card"><span class="cond" style="font-size:60px;font-stretch:112%;font-weight:800">Ancha</span><p style="margin-top:10px">Archivo expandida para portadas de campaña (Takeover). Solo en piezas grandes.</p></div>
+    <div class="card"><span class="cond" style="font-size:60px">Sólida <span style="color:var(--acido)">ácida</span></span><p style="margin-top:10px">La última palabra del titular en ácido: el remate.</p></div>
+  </div>
+</div></section>
+
+<!-- 05 FOTOGRAFIA -->
+<section id="fotografia"><div class="wrap">
+  <div class="kick"><span class="mono"><b>05</b> Fotografía</span><span class="mono muted">En vivo, siempre</span></div>
+  <h2>En <em>vivo</em></h2>
+  <p class="lead">La imagen oficial es el artista tocando: voz en el micrófono, manos en los equipos, público y visuales. Nada de retratos posados con gafas. Hay dos tratamientos y nada más.</p>
+  <div class="pair" style="margin-top:36px">
+    <div><img class="ph" src="assets/img/live-voz.jpg" alt="Foto en color real cantando en vivo" style="object-position:62% 30%"><h4 style="margin-top:14px;font:600 16px Inter">Color real</h4><p class="muted" style="font-size:14px">Para galerías, portadas web y prensa. La luz del escenario cuenta la historia: se respeta, sin filtros saturados.</p></div>
+    <div><div class="duotono"><img class="ph" src="assets/img/bio-humo.webp" alt="Foto en duotono ácido" style="object-position:50% 18%;filter:grayscale(1) contrast(1.25) brightness(1.6);transform:scale(1.4);transform-origin:52% 22%"></div><h4 style="margin-top:14px;font:600 16px Inter">Duotono ácido</h4><p class="muted" style="font-size:14px">El sello gráfico. Retratos, bio, portadas de reels y carruseles, flyers. Hace que cualquier foto se reconozca como Da Get Up.</p></div>
+  </div>
+  <h3>Receta del duotono</h3>
+  <div class="grid g3">
+    <div class="card"><span class="label on">1</span><h4>Blanco y negro</h4><p>Quitar todo el color y subir el contraste (+35 a +45%).</p></div>
+    <div class="card"><span class="label on">2</span><h4>Aclarar</h4><p>Las fotos de noche se aclaran mucho antes (+60 a +90% de brillo) o salen negras.</p></div>
+    <div class="card"><span class="label on">3</span><h4>Multiplicar sobre ácido</h4><p>Capa en modo <b>Multiplicar</b> sobre un fondo #D4FF00. En Canva o Photoshop: duotono negro → #D4FF00.</p></div>
+  </div>
+  <h3>Para tomar las fotos</h3>
+  <div class="grid g4">
+    <div class="card"><h4>Sí</h4><ul><li>Plano abierto con público</li><li>Plano medio cantando</li><li>Manos en los equipos</li><li>Algunas con buena luz en la cara (para duotono)</li></ul></div>
+    <div class="card"><h4>No</h4><ul><li>Retratos posados con gafas</li><li>Filtros de Instagram</li><li>Fondos psicodélicos</li><li>Fotos borrosas o pixeladas</li></ul></div>
+    <div><img class="ph" src="assets/img/fest-carpa.jpg" alt="Show con público y proyecciones" style="aspect-ratio:1"></div>
+    <div><img class="ph" src="assets/img/fest-rojo.jpg" alt="Escenario con luz roja" style="aspect-ratio:1"></div>
+  </div>
+</div></section>
+
+<!-- 06 RECURSOS -->
+<section id="recursos"><div class="wrap">
+  <div class="kick"><span class="mono"><b>06</b> Recursos gráficos</span><span class="mono muted">El kit visual</span></div>
+  <h2>Recursos <em>gráficos</em></h2>
+  <div class="grid g2" style="margin-top:10px">
+    <div class="card" style="padding:0;overflow:hidden"><div class="ticker"><div>Bajo la superficie /// El Andar /// Live Act /// Voz + Synths /// Bajo la superficie /// El Andar /// Live Act /// Voz + Synths ///&nbsp;</div></div><div style="padding:20px"><h4>Franja ácida</h4><p>Cinta en movimiento con palabras de la marca separadas por ///. Atraviesa la pieza de lado a lado.</p></div></div>
+    <div class="card"><div class="dots" aria-hidden="true"><i style="height:40%"></i><i style="height:70%"></i><i style="height:55%"></i><i style="height:90%"></i><i style="height:65%"></i><i style="height:35%"></i><i style="height:80%"></i><i style="height:50%"></i><i style="height:95%"></i><i style="height:60%"></i><i style="height:30%"></i><i style="height:75%"></i></div><h4 style="margin-top:16px">Ecualizador de puntos</h4><p>Barras de puntos como las letras del logo. Fondos web, visuales y animaciones.</p></div>
+    <div class="card"><p class="mono" style="font-size:16px"><b style="color:var(--acido);font-weight:500">[03]</b> Trayectoria <span class="muted">—————</span> Gira 2022</p><h4 style="margin-top:16px">Barras de etiqueta</h4><p>Arriba y abajo de la pieza: número entre corchetes en ácido, texto en mono y una línea fina.</p></div>
+    <div class="card" style="position:relative;overflow:hidden;min-height:180px"><div style="position:absolute;inset:0;background:radial-gradient(60% 60% at 100% 0%,rgba(123,44,255,.45),transparent 70%)"></div><div style="position:relative"><h4>Brillo UV + grano</h4><p>Un resplandor violeta en una esquina y grano de película encima. Profundidad sin decorar.</p></div></div>
+  </div>
+</div></section>
+
+<!-- 07 VOZ -->
+<section id="voz"><div class="wrap">
+  <div class="kick"><span class="mono"><b>07</b> Voz y tono</span><span class="mono muted">Cómo habla Da Get Up</span></div>
+  <h2>Voz y <em>tono</em></h2>
+  <p class="lead">Primera persona, frases cortas, honestas. Poético sin ser cursi. Como el manifiesto.</p>
+  <div class="grid g2" style="margin-top:30px">
+    <div class="card" style="border-top:3px solid var(--acido)"><h4>Sí</h4><ul><li>"Lo que pasa en la pista se ve. Lo que importa pasa bajo la superficie."</li><li>"No estoy interpretando un personaje. Estoy mostrando quién soy."</li><li>Contar el proceso: el estudio, el ensayo, el error.</li><li>Agradecer con nombre propio a cada venue y artista.</li></ul></div>
+    <div class="card" style="border-top:3px solid #ff5a4e"><h4>No</h4><ul><li>"🔥🔥 EL MEJOR SET DEL AÑO 🔥🔥"</li><li>Hablar de "world music", cumbia o folclor como etiqueta.</li><li>Mezclar en el feed géneros y proyectos que no son el live act.</li><li>Símbolos, banderas o referencias que se puedan malinterpretar.</li></ul></div>
+  </div>
+  <h3>Palabras de la marca</h3>
+  <p class="cond" style="font-size:clamp(28px,4vw,48px);line-height:1.1;color:var(--ceniza)">Superficie · <span style="color:var(--hueso)">camino</span> · pista · <span style="color:var(--acido)">voz</span> · noche · <span style="color:var(--hueso)">capítulo</span> · sentir · <span style="color:var(--acido)">en vivo</span> · andar · <span style="color:var(--hueso)">profundo</span></p>
+  <h3>Hashtags base</h3>
+  <p class="mono" style="font-size:14px;line-height:2">#DaGetUp #BajoLaSuperficie #ElAndar #LiveAct #IndieElectronic #HouseMusic #MusicaElectronica</p>
+</div></section>
+
+<!-- 08 APLICACIONES -->
+<section id="aplicaciones"><div class="wrap">
+  <div class="kick"><span class="mono"><b>08</b> Aplicaciones</span><span class="mono muted">La marca funcionando</span></div>
+  <h2><em>Aplicaciones</em></h2>
+  <div class="grid g2" style="align-items:center;margin-top:10px">
+    <div class="phone">
+      <div class="head"><div class="av"><img src="descargas/vector/DaGetUp_Buho_hueso.svg" alt=""></div><div class="bio"><b>Da Get Up · Live Act</b>Bajo la superficie ✦ Voz, sintes y Ableton en vivo ✦ El Andar · próximamente<br><span style="color:#9fd">werock.space/dagetup</span></div></div>
+      <div class="ig">
+        <img src="assets/img/ig-takeover-feed-m1.jpg" alt=""><img src="assets/img/ig-takeover-feed-m2.jpg" alt=""><img src="assets/img/ig-carrusel-c3.jpg" alt="">
+        <img src="assets/img/ig-quien-q2.jpg" alt=""><img src="assets/img/ig-tipografica-t1.jpg" alt=""><img src="assets/img/ig-quien-q3.jpg" alt="">
+        <img src="assets/img/ig-quien-q1.jpg" alt=""><img src="assets/img/live-voz.jpg" alt="" style="object-position:62% 30%"><img src="assets/img/fest-carpa.jpg" alt="">
+      </div>
+    </div>
+    <div>
+      <h3 style="margin-top:0">Instagram @dagetup90</h3>
+      <p>Avatar con el búho solo, hueso sobre noche. Cuadrícula con ritmo: piezas ácidas en diagonal, fotos en vivo y tipográficas alternadas. Cada post con barra de etiqueta y la paleta oficial.</p>
+      <p class="muted" style="margin-top:12px">Kit de piezas listas: <a href="https://werockagencia.github.io/dagetup-medellin/ig/" target="_blank" rel="noopener">werockagencia.github.io/dagetup-medellin/ig</a></p>
+    </div>
+  </div>
+  <div class="apps" style="margin-top:40px">
+    <figure><img src="assets/img/ig-quien-q1.jpg" alt="Portada de carrusel"><figcaption>Portada de carrusel · duotono</figcaption></figure>
+    <figure><img src="assets/img/ig-tipografica-t1.jpg" alt="Pieza tipográfica"><figcaption>Pieza tipográfica · marca</figcaption></figure>
+    <figure><img src="assets/img/ig-takeover-historia-n1.jpg" alt="Historia de campaña" style="aspect-ratio:9/16;object-fit:cover;width:100%"><figcaption>Historia · campaña</figcaption></figure>
+    <figure><img src="assets/img/ig-quien-q3.jpg" alt="Slide de datos"><figcaption>Slide de datos · tipografía</figcaption></figure>
+  </div>
+  <div class="grid g2" style="margin-top:14px">
+    <div class="apps" style="grid-template-columns:1fr"><figure><img src="assets/img/banner-correo.png" alt="Banner de correo para venues"><figcaption>Banner de correo · booking</figcaption></figure></div>
+    <div class="card"><h4>Web</h4><p>EPK en <a href="https://werock.space/dagetup/" target="_blank" rel="noopener">werock.space/dagetup</a> y landing de gira en <a href="https://werock.space/dagetup/medellin/" target="_blank" rel="noopener">werock.space/dagetup/medellin</a>: negro, hueso, ácido, fotos en vivo, duotono en la bio y franja ácida. Son la referencia para cualquier pieza digital nueva.</p><p class="muted" style="margin-top:10px">Siguientes aplicaciones a diseñar: flyer de fecha (plantilla), merch (camiseta y sticker del búho), portada y Canvas de Spotify para El Andar.</p></div>
+  </div>
+</div></section>
+
+<!-- 09 DESCARGAS -->
+<section id="descargas"><div class="wrap">
+  <div class="kick"><span class="mono"><b>09</b> Descargas</span><span class="mono muted">Archivos oficiales</span></div>
+  <h2><em>Descargas</em></h2>
+  <div style="border-top:1px solid var(--linea)">
+    <div class="dl-row"><div><h4>Kit de marca completo</h4><p class="muted" style="font-size:14px">Logos en vector y PNG, en todas sus versiones y colores.</p></div><a class="btn" href="descargas/DaGetUp_Kit_de_Marca.zip" download>Bajar ZIP</a></div>
+    <div class="dl-row"><div><h4>Logos en PNG</h4><p class="muted" style="font-size:14px">Fondo transparente, ~2300 px. Para redes, presentaciones y Canva.</p></div><a class="btn ghost" href="descargas/DaGetUp_Logos_PNG.zip" download>PNG</a></div>
+    <div class="dl-row"><div><h4>Logos en vector (SVG)</h4><p class="muted" style="font-size:14px">Para imprenta, diseñadores, gran formato y pantallas LED. Escalan sin perder calidad.</p></div><a class="btn ghost" href="descargas/DaGetUp_Logos_Vector.zip" download>SVG</a></div>
+    <div class="dl-row"><div><h4>Tipografías</h4><p class="muted" style="font-size:14px">Archivo, Inter y JetBrains Mono · gratis en Google Fonts.</p></div><a class="btn ghost" href="https://fonts.google.com/share?selection.family=Archivo:wdth,wght@62..125,400..900%7CInter:wght@400;500;600%7CJetBrains+Mono:wght@400;500;700" target="_blank" rel="noopener">Google Fonts</a></div>
+  </div>
+</div></section>
+
+<footer>
+  <img src="descargas/vector/DaGetUp_Logo_hueso.svg" alt="Da Get Up">
+  <p class="mono muted">Manual de marca v1.0 · Noviembre 2026 · Bajo la superficie</p>
+</footer>
+</body>
+</html>
