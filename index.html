@@ -179,7 +179,7 @@ a{color:inherit}
 
 /* descargas */
 .dlg{display:grid;gap:10px;margin-top:10px}
-@media(min-width:900px),print{.dlg{grid-template-columns:repeat(3,1fr)}.dlg .main{grid-column:span 3}}
+@media(min-width:900px),print{.dlg{grid-template-columns:repeat(4,1fr)}.dlg .main{grid-column:span 4}}
 .dl{display:flex;flex-direction:column;gap:6px;padding:16px;border:1px solid var(--linea);text-decoration:none;transition:border-color .2s,background .2s}
 .dl:hover{border-color:var(--acido);background:rgba(212,255,0,.05)}
 .dl b{font-family:Archivo;font-stretch:62%;font-weight:800;text-transform:uppercase;font-size:24px;line-height:1}
@@ -229,7 +229,7 @@ a{color:inherit}
     <a href="#s5"><b>05</b><span>Imagen</span><i>23</i></a>
     <a href="#s6"><b>06</b><span>Voz</span><i>27</i></a>
     <a href="#s7"><b>07</b><span>Aplicaciones</span><i>29</i></a>
-    <a href="#descargas"><b>08</b><span>Descargas</span><i>37</i></a>
+    <a href="#descargas"><b>08</b><span>Descargas</span><i>38</i></a>
   </div>
   <div class="ft m"><img src="descargas/vector/DaGetUp_Buho_hueso.svg" alt=""></div>
 </section>
@@ -687,26 +687,44 @@ a{color:inherit}
 </section>
 
 <section class="pg light">
-  <div class="hd m"><span><b>07 · Aplicaciones</b></span><span>Merch</span></div>
-  <div class="cols c3">
-    <div class="mk lt" style="background:#d9d3c7"><span class="lb">Camiseta</span>
-      <svg class="abs" viewBox="0 0 400 400" style="inset:6% 8%;width:84%;height:88%;filter:drop-shadow(0 18px 20px rgba(0,0,0,.35))"><path d="M130 40 L80 60 L20 130 L70 170 L100 145 L100 370 L300 370 L300 145 L330 170 L380 130 L320 60 L270 40 C 255 70, 145 70, 130 40 Z" fill="#0b0b0c"/><path d="M130 40 C 145 70, 255 70, 270 40" fill="none" stroke="#1f1f22" stroke-width="6"/></svg>
-      <img src="descargas/vector/DaGetUp_Buho_acido.svg" alt="" class="abs" style="left:40%;top:38%;width:20%">
+  <div class="hd m"><span><b>07 · Aplicaciones</b></span><span>Merch · Colección 01</span></div>
+  <div class="cols c3" style="align-content:center">
+    <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
+      <img src="assets/img/merch/t1-mockup.jpg" alt="Camiseta Búho, frente y espalda" style="width:100%;aspect-ratio:2400/1300;object-fit:cover;display:block">
+      <div><span class="k" style="margin-bottom:6px">01 · Negra</span><h3>Búho</h3><p class="mut" style="font-size:13px">Búho ácido en el pecho, nombre en puntos atrás · 2 tintas</p></div>
     </div>
-    <div class="mk lt" style="background:#cfc8bb"><span class="lb">Tote</span>
-      <svg class="abs" viewBox="0 0 400 400" style="inset:0;width:100%;height:100%"><path d="M150 120 C 150 50, 250 50, 250 120" fill="none" stroke="#e3dccd" stroke-width="10"/><rect x="104" y="116" width="192" height="230" fill="rgba(0,0,0,.25)" transform="translate(6 9)" style="filter:blur(7px)"/><rect x="104" y="116" width="192" height="230" fill="#ede6da"/></svg>
-      <img src="descargas/vector/DaGetUp_Logo_negro.svg" alt="" class="abs" style="left:34%;top:46%;width:32%">
+    <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
+      <img src="assets/img/merch/t2-mockup.jpg" alt="Camiseta Takeover, frente y espalda" style="width:100%;aspect-ratio:2400/1300;object-fit:cover;display:block">
+      <div><span class="k" style="margin-bottom:6px">02 · Negra</span><h3>Takeover</h3><p class="mut" style="font-size:13px">Mirada gigante adelante, la gira atrás · 2 tintas</p></div>
     </div>
-    <div class="mk lt" style="background:#bfb8ab"><span class="lb">Stickers y credencial</span>
-      <div class="abs sh" style="left:9%;top:16%;width:40%;aspect-ratio:1;border-radius:50%;background:var(--acido);display:grid;place-items:center;transform:rotate(-8deg)"><img src="descargas/vector/DaGetUp_Buho_negro.svg" alt="" style="width:66%"></div>
-      <div class="pass sh" style="right:10%;top:12%;height:76%;background:#0b0b0c;transform:rotate(5deg);display:flex;flex-direction:column;justify-content:space-between;padding:7%">
-        <img src="descargas/vector/DaGetUp_Buho_hueso.svg" alt="" style="width:48%">
-        <div><div class="c ac" style="font-size:clamp(20px,6cqh,34px)">Artist</div><div class="m" style="color:#8a857d;font-size:8px;margin-top:4px">All access · Live act</div></div>
-      </div>
-      <div class="abs sh" style="left:12%;bottom:10%;width:44%;background:#0b0b0c;padding:3% 5%;transform:rotate(3deg)"><img src="descargas/vector/DaGetUp_Letras_hueso.svg" alt=""></div>
+    <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
+      <img src="assets/img/merch/t3-mockup.jpg" alt="Camiseta Superficie, frente y espalda" style="width:100%;aspect-ratio:2400/1300;object-fit:cover;display:block">
+      <div><span class="k" style="margin-bottom:6px">03 · Hueso</span><h3>Superficie</h3><p class="mut" style="font-size:13px">El concepto: el búho mira desde abajo de la línea · 1 tinta</p></div>
     </div>
   </div>
   <div class="ft m"><img src="descargas/vector/DaGetUp_Buho_negro.svg" alt=""></div>
+</section>
+
+<section class="pg">
+  <div class="hd m"><span><b>07 · Aplicaciones</b></span><span>Merch · Arte final para imprenta</span></div>
+  <div class="cols c12">
+    <div style="display:flex;flex-direction:column;gap:12px;justify-content:center">
+      <span class="k">Listo para imprimir</span>
+      <h2>Arte <em>final</em></h2>
+      <p>PNG transparente a 300 dpi y a tamaño real: se imprime al 100%, sin escalar. Colores planos de la paleta.</p>
+      <p class="mut" style="font-size:13px"><b style="color:var(--fg)">Técnica:</b> DTF desde 1 unidad (conserva los surcos del búho). Serigrafía desde ~50 por diseño, con malla de 120 hilos o más.<br><b style="color:var(--fg)">Ubicación:</b> centrado, medido desde la costura del cuello. Frente 8–9 cm; espalda 7–8 cm; nuca 4 cm.<br><b style="color:var(--fg)">Prenda:</b> algodón peinado 100%, 180–200 g/m². Hueso = color crudo, no blanco óptico.<br><b style="color:var(--fg)">Color:</b> el ácido sale verde limón brillante. Pedir prueba antes del tiraje.</p>
+      <a class="m" href="descargas/DaGetUp_Merch_Arte_Final.zip" download style="color:var(--acido)">Bajar arte final (ZIP) ↓</a>
+    </div>
+    <div class="cols c3" style="align-content:center;gap:12px">
+      <div style="display:flex;flex-direction:column;gap:6px;min-width:0"><div style="aspect-ratio:4/3;background:#1c1c1f;display:grid;place-items:center;padding:10%"><img src="descargas/merch/t1-frente.png" alt="" style="max-width:100%;max-height:100%"></div><span class="m mut">t1-frente.png · 10 × 4,3 cm</span></div>
+      <div style="display:flex;flex-direction:column;gap:6px;min-width:0"><div style="aspect-ratio:4/3;background:#1c1c1f;display:grid;place-items:center;padding:10%"><img src="descargas/merch/t1-espalda.png" alt="" style="max-width:100%;max-height:100%"></div><span class="m mut">t1-espalda.png · 28 × 8,7 cm</span></div>
+      <div style="display:flex;flex-direction:column;gap:6px;min-width:0"><div style="aspect-ratio:4/3;background:#1c1c1f;display:grid;place-items:center;padding:10%"><img src="descargas/merch/t2-frente.png" alt="" style="max-width:100%;max-height:100%"></div><span class="m mut">t2-frente.png · 26 × 11,2 cm</span></div>
+      <div style="display:flex;flex-direction:column;gap:6px;min-width:0"><div style="aspect-ratio:4/3;background:#1c1c1f;display:grid;place-items:center;padding:10%"><img src="descargas/merch/t2-espalda.png" alt="" style="max-width:100%;max-height:100%"></div><span class="m mut">t2-espalda.png · 28 × 21,1 cm</span></div>
+      <div style="display:flex;flex-direction:column;gap:6px;min-width:0"><div style="aspect-ratio:4/3;background:#e9e2d4;display:grid;place-items:center;padding:10%"><img src="descargas/merch/t3-frente.png" alt="" style="max-width:100%;max-height:100%"></div><span class="m mut">t3-frente.png · 26 × 21 cm</span></div>
+      <div style="display:flex;flex-direction:column;gap:6px;min-width:0"><div style="aspect-ratio:4/3;background:#e9e2d4;display:grid;place-items:center;padding:10%"><img src="descargas/merch/t3-espalda.png" alt="" style="max-width:100%;max-height:100%"></div><span class="m mut">t3-espalda.png · 6 × 2,6 cm</span></div>
+    </div>
+  </div>
+  <div class="ft m"><img src="descargas/vector/DaGetUp_Buho_hueso.svg" alt=""></div>
 </section>
 
 <section class="pg">
@@ -728,6 +746,7 @@ a{color:inherit}
     <a class="dl main" href="descargas/DaGetUp_Kit_de_Marca.zip" download><b>Kit de marca completo</b><span class="d">Logos en vector y PNG, todas las versiones y colores.</span><span class="go">Bajar ZIP ↓</span></a>
     <a class="dl" href="descargas/DaGetUp_Logos_Vector.zip" download><b>Logos · vector</b><span class="d">SVG para imprenta, gran formato y LED.</span><span class="go">Bajar ↓</span></a>
     <a class="dl" href="descargas/DaGetUp_Logos_PNG.zip" download><b>Logos · PNG</b><span class="d">Fondo transparente para redes y Canva.</span><span class="go">Bajar ↓</span></a>
+    <a class="dl" href="descargas/DaGetUp_Merch_Arte_Final.zip" download><b>Merch · arte final</b><span class="d">Tres camisetas en PNG 300 dpi a tamaño real, con mockups.</span><span class="go">Bajar ↓</span></a>
     <a class="dl" href="descargas/DaGetUp_Manual_de_Marca.pdf" download><b>Manual · PDF</b><span class="d">Este documento para imprimir o enviar.</span><span class="go">Bajar ↓</span></a>
   </div>
   <p class="mut" style="position:relative;font-size:12.5px;margin-top:14px;max-width:none">Tipografías: Archivo, Inter y JetBrains Mono, gratuitas en Google Fonts.</p>
