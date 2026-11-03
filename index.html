@@ -188,6 +188,13 @@ a{color:inherit}
 .dl.main{background:var(--acido);color:#000;border-color:var(--acido)}
 .dl.main .d{color:#2b3a00}.dl.main .go{color:#000}
 
+.zoom{all:unset;cursor:zoom-in;display:block;position:relative}
+.zoom:focus-visible{outline:2px solid var(--acido);outline-offset:3px}
+#zoomBox{position:fixed;inset:0;z-index:99;background:rgba(11,11,12,.94);display:grid;place-items:center;padding:4vmin;cursor:zoom-out}
+#zoomBox[hidden]{display:none}
+#zoomBox img{max-width:100%;max-height:100%;object-fit:contain;padding:3vmin}
+#zoomBox .x{position:absolute;top:16px;right:20px;font:500 12px "JetBrains Mono",monospace;letter-spacing:.16em;color:#ede6da}
+@media print{#zoomBox{display:none!important}}
 @media print{
   @page{size:297mm 210mm;margin:0}
   html,body{background:#000}
@@ -690,18 +697,19 @@ a{color:inherit}
   <div class="hd m"><span><b>07 · Aplicaciones</b></span><span>Merch · Colección 01</span></div>
   <div class="cols c3" style="align-content:center">
     <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
-      <img src="assets/img/merch/t1-mockup.jpg" alt="Camiseta Búho, frente y espalda" style="width:100%;aspect-ratio:2400/1300;object-fit:cover;display:block">
-      <div><span class="k" style="margin-bottom:6px">01 · Negra</span><h3>Búho</h3><p class="mut" style="font-size:13px">Búho ácido en el pecho, nombre en puntos atrás · 2 tintas</p></div>
+      <button class="zoom" data-zoom="assets/img/merch/t1-mockup.jpg" aria-label="Ampliar camiseta Logo"><img src="assets/img/merch/t1-mockup.jpg" alt="Camiseta Logo, frente y espalda" style="width:100%;aspect-ratio:2400/1300;object-fit:cover;display:block"></button>
+      <div><span class="k" style="margin-bottom:6px">01 · Negra</span><h3>Logo</h3><p class="mut" style="font-size:13px">Logo completo en hueso, centrado en el pecho · 1 tinta</p></div>
     </div>
     <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
-      <img src="assets/img/merch/t2-mockup.jpg" alt="Camiseta Takeover, frente y espalda" style="width:100%;aspect-ratio:2400/1300;object-fit:cover;display:block">
-      <div><span class="k" style="margin-bottom:6px">02 · Negra</span><h3>Takeover</h3><p class="mut" style="font-size:13px">Mirada gigante adelante, la gira atrás · 2 tintas</p></div>
+      <button class="zoom" data-zoom="assets/img/merch/t2-mockup.jpg" aria-label="Ampliar camiseta Búho"><img src="assets/img/merch/t2-mockup.jpg" alt="Camiseta Búho, frente y espalda" style="width:100%;aspect-ratio:2400/1300;object-fit:cover;display:block"></button>
+      <div><span class="k" style="margin-bottom:6px">02 · Negra</span><h3>Búho</h3><p class="mut" style="font-size:13px">Búho ácido en el pecho izquierdo, nombre en puntos atrás · 2 tintas</p></div>
     </div>
     <div style="display:flex;flex-direction:column;gap:10px;min-width:0">
-      <img src="assets/img/merch/t3-mockup.jpg" alt="Camiseta Superficie, frente y espalda" style="width:100%;aspect-ratio:2400/1300;object-fit:cover;display:block">
-      <div><span class="k" style="margin-bottom:6px">03 · Hueso</span><h3>Superficie</h3><p class="mut" style="font-size:13px">El concepto: el búho mira desde abajo de la línea · 1 tinta</p></div>
+      <button class="zoom" data-zoom="assets/img/merch/t3-mockup.jpg" aria-label="Ampliar camiseta Natural"><img src="assets/img/merch/t3-mockup.jpg" alt="Camiseta Natural, frente y espalda" style="width:100%;aspect-ratio:2400/1300;object-fit:cover;display:block"></button>
+      <div><span class="k" style="margin-bottom:6px">03 · Hueso</span><h3>Natural</h3><p class="mut" style="font-size:13px">Logo completo en negro, búho pequeño en la nuca · 1 tinta</p></div>
     </div>
   </div>
+  <p class="m mut" style="margin-top:12px">Clic en cada camiseta para verla en grande.</p>
   <div class="ft m"><img src="descargas/vector/DaGetUp_Buho_negro.svg" alt=""></div>
 </section>
 
@@ -711,17 +719,16 @@ a{color:inherit}
     <div style="display:flex;flex-direction:column;gap:12px;justify-content:center">
       <span class="k">Listo para imprimir</span>
       <h2>Arte <em>final</em></h2>
-      <p>PNG transparente a 300 dpi y a tamaño real: se imprime al 100%, sin escalar. Colores planos de la paleta.</p>
-      <p class="mut" style="font-size:13px"><b style="color:var(--fg)">Técnica:</b> DTF desde 1 unidad (conserva los surcos del búho). Serigrafía desde ~50 por diseño, con malla de 120 hilos o más.<br><b style="color:var(--fg)">Ubicación:</b> centrado, medido desde la costura del cuello. Frente 8–9 cm; espalda 7–8 cm; nuca 4 cm.<br><b style="color:var(--fg)">Prenda:</b> algodón peinado 100%, 180–200 g/m². Hueso = color crudo, no blanco óptico.<br><b style="color:var(--fg)">Color:</b> el ácido sale verde limón brillante. Pedir prueba antes del tiraje.</p>
+      <p>Solo el logo y el nombre. PNG transparente a 300 dpi y a tamaño real: se imprime al 100%, sin escalar.</p>
+      <p class="mut" style="font-size:13px"><b style="color:var(--fg)">Técnica:</b> DTF desde 1 unidad (conserva los surcos del búho). Serigrafía desde ~50 por diseño, con malla de 120 hilos o más.<br><b style="color:var(--fg)">Ubicación:</b> medida desde la costura del cuello. Logo centrado a 8 cm; búho de pecho a 7 cm y 10 cm a la izquierda del centro; nombre en la espalda a 7 cm; búho de nuca a 3 cm.<br><b style="color:var(--fg)">Prenda:</b> algodón peinado 100%, 180–200 g/m². Hueso = color crudo, no blanco óptico.<br><b style="color:var(--fg)">Color:</b> el ácido sale verde limón brillante. Pedir prueba antes del tiraje.</p>
       <a class="m" href="descargas/DaGetUp_Merch_Arte_Final.zip" download style="color:var(--acido)">Bajar arte final (ZIP) ↓</a>
     </div>
     <div class="cols c3" style="align-content:center;gap:12px">
-      <div style="display:flex;flex-direction:column;gap:6px;min-width:0"><div style="aspect-ratio:4/3;background:#1c1c1f;display:grid;place-items:center;padding:10%"><img src="descargas/merch/t1-frente.png" alt="" style="max-width:100%;max-height:100%"></div><span class="m mut">t1-frente.png · 10 × 4,3 cm</span></div>
-      <div style="display:flex;flex-direction:column;gap:6px;min-width:0"><div style="aspect-ratio:4/3;background:#1c1c1f;display:grid;place-items:center;padding:10%"><img src="descargas/merch/t1-espalda.png" alt="" style="max-width:100%;max-height:100%"></div><span class="m mut">t1-espalda.png · 28 × 8,7 cm</span></div>
-      <div style="display:flex;flex-direction:column;gap:6px;min-width:0"><div style="aspect-ratio:4/3;background:#1c1c1f;display:grid;place-items:center;padding:10%"><img src="descargas/merch/t2-frente.png" alt="" style="max-width:100%;max-height:100%"></div><span class="m mut">t2-frente.png · 26 × 11,2 cm</span></div>
-      <div style="display:flex;flex-direction:column;gap:6px;min-width:0"><div style="aspect-ratio:4/3;background:#1c1c1f;display:grid;place-items:center;padding:10%"><img src="descargas/merch/t2-espalda.png" alt="" style="max-width:100%;max-height:100%"></div><span class="m mut">t2-espalda.png · 28 × 21,1 cm</span></div>
-      <div style="display:flex;flex-direction:column;gap:6px;min-width:0"><div style="aspect-ratio:4/3;background:#e9e2d4;display:grid;place-items:center;padding:10%"><img src="descargas/merch/t3-frente.png" alt="" style="max-width:100%;max-height:100%"></div><span class="m mut">t3-frente.png · 26 × 21 cm</span></div>
-      <div style="display:flex;flex-direction:column;gap:6px;min-width:0"><div style="aspect-ratio:4/3;background:#e9e2d4;display:grid;place-items:center;padding:10%"><img src="descargas/merch/t3-espalda.png" alt="" style="max-width:100%;max-height:100%"></div><span class="m mut">t3-espalda.png · 6 × 2,6 cm</span></div>
+      <div style="display:flex;flex-direction:column;gap:6px;min-width:0"><button class="zoom" data-zoom="descargas/merch/t1-frente.png" data-bg="#1c1c1f" aria-label="Ampliar t1-frente" style="aspect-ratio:4/3;background:#1c1c1f;display:grid;place-items:center;padding:12%"><img src="descargas/merch/t1-frente.png" alt="" style="max-width:100%;max-height:100%"></button><span class="m mut">t1-frente.png · Logo · 12 × 6,3 cm</span></div>
+      <div style="display:flex;flex-direction:column;gap:6px;min-width:0"><button class="zoom" data-zoom="descargas/merch/t2-frente.png" data-bg="#1c1c1f" aria-label="Ampliar t2-frente" style="aspect-ratio:4/3;background:#1c1c1f;display:grid;place-items:center;padding:12%"><img src="descargas/merch/t2-frente.png" alt="" style="max-width:100%;max-height:100%"></button><span class="m mut">t2-frente.png · Búho · 8 × 3,4 cm</span></div>
+      <div style="display:flex;flex-direction:column;gap:6px;min-width:0"><button class="zoom" data-zoom="descargas/merch/t2-espalda.png" data-bg="#1c1c1f" aria-label="Ampliar t2-espalda" style="aspect-ratio:4/3;background:#1c1c1f;display:grid;place-items:center;padding:12%"><img src="descargas/merch/t2-espalda.png" alt="" style="max-width:100%;max-height:100%"></button><span class="m mut">t2-espalda.png · Nombre · 26 × 4,6 cm</span></div>
+      <div style="display:flex;flex-direction:column;gap:6px;min-width:0"><button class="zoom" data-zoom="descargas/merch/t3-frente.png" data-bg="#e9e2d4" aria-label="Ampliar t3-frente" style="aspect-ratio:4/3;background:#e9e2d4;display:grid;place-items:center;padding:12%"><img src="descargas/merch/t3-frente.png" alt="" style="max-width:100%;max-height:100%"></button><span class="m mut">t3-frente.png · Logo · 12 × 6,3 cm</span></div>
+      <div style="display:flex;flex-direction:column;gap:6px;min-width:0"><button class="zoom" data-zoom="descargas/merch/t3-espalda.png" data-bg="#e9e2d4" aria-label="Ampliar t3-espalda" style="aspect-ratio:4/3;background:#e9e2d4;display:grid;place-items:center;padding:12%"><img src="descargas/merch/t3-espalda.png" alt="" style="max-width:100%;max-height:100%"></button><span class="m mut">t3-espalda.png · Nuca · 5 × 2,1 cm</span></div>
     </div>
   </div>
   <div class="ft m"><img src="descargas/vector/DaGetUp_Buho_hueso.svg" alt=""></div>
@@ -746,7 +753,7 @@ a{color:inherit}
     <a class="dl main" href="descargas/DaGetUp_Kit_de_Marca.zip" download><b>Kit de marca completo</b><span class="d">Logos en vector y PNG, todas las versiones y colores.</span><span class="go">Bajar ZIP ↓</span></a>
     <a class="dl" href="descargas/DaGetUp_Logos_Vector.zip" download><b>Logos · vector</b><span class="d">SVG para imprenta, gran formato y LED.</span><span class="go">Bajar ↓</span></a>
     <a class="dl" href="descargas/DaGetUp_Logos_PNG.zip" download><b>Logos · PNG</b><span class="d">Fondo transparente para redes y Canva.</span><span class="go">Bajar ↓</span></a>
-    <a class="dl" href="descargas/DaGetUp_Merch_Arte_Final.zip" download><b>Merch · arte final</b><span class="d">Tres camisetas en PNG 300 dpi a tamaño real, con mockups.</span><span class="go">Bajar ↓</span></a>
+    <a class="dl" href="descargas/DaGetUp_Merch_Arte_Final.zip" download><b>Merch · arte final</b><span class="d">Tres camisetas minimal en PNG 300 dpi a tamaño real, con mockups.</span><span class="go">Bajar ↓</span></a>
     <a class="dl" href="descargas/DaGetUp_Manual_de_Marca.pdf" download><b>Manual · PDF</b><span class="d">Este documento para imprimir o enviar.</span><span class="go">Bajar ↓</span></a>
   </div>
   <p class="mut" style="position:relative;font-size:12.5px;margin-top:14px;max-width:none">Tipografías: Archivo, Inter y JetBrains Mono, gratuitas en Google Fonts.</p>
@@ -765,5 +772,12 @@ a{color:inherit}
 </section>
 
 </main>
+<div id="zoomBox" hidden role="dialog" aria-label="Imagen ampliada"><span class="x">CERRAR ✕</span><img alt=""></div>
+<script>
+(()=>{const box=document.getElementById('zoomBox'),im=box.querySelector('img');
+document.querySelectorAll('.zoom').forEach(b=>b.addEventListener('click',()=>{im.src=b.dataset.zoom;im.style.background=b.dataset.bg||'transparent';box.hidden=false}));
+box.addEventListener('click',()=>{box.hidden=true;im.src=''});
+addEventListener('keydown',e=>{if(e.key==='Escape')box.hidden=true});})();
+</script>
 </body>
 </html>
